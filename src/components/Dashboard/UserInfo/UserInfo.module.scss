@@ -1,0 +1,36 @@
+.user-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+    margin-top: 68px;
+    &__image{
+        width: 90px;
+        height: 90px;
+        padding: 5px;
+        border: 3px solid #D8605B;
+        border-radius: 50%;
+        & img {
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &_name{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    &__caption{
+        font-weight: 500;
+        ont-size: 10px;
+        color: #D8605B;
+        margin-bottom: 12px;
+    }
+    &__button {
+        width: 89px;
+        margin-bottom: 44px;
+    }
+
+}

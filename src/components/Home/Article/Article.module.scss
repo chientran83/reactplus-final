@@ -1,0 +1,26 @@
+.content{
+    padding: 13px 47px;
+}
+.article{
+    text-align: center;
+    &__title{
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 13px;
+        &--small{
+            margin-bottom: 4px;
+        }
+        &--larger{
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 19px;
+        }
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 139.19%;
+        color: rgba(0, 0, 0, 0.74);
+        margin-bottom: 90px;
+    }
+}

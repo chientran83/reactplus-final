@@ -1,0 +1,18 @@
+.direction{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    padding-bottom: 55px;
+    &__text{
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 4px;
+    }
+    & a{
+        text-decoration: none;
+        display: block;
+        font-weight: 600;
+        color: #D8605B;
+    }
+}

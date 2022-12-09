@@ -1,0 +1,52 @@
+.content{
+    padding: 7px 47px 17px 47px;
+}
+.article{
+    text-align: center;
+    &__title{
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 63px;
+        &--small{
+            margin-bottom: 4px;
+        }
+        &--larger{
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 19px;
+        }
+    }
+}
+.button {
+    margin: 0 30px;
+}
+
+.login-form{
+    margin: 0 30px;
+    &__group{
+        margin-bottom: 5px;
+        &.error{
+            & .login-form__input{
+                box-shadow: 0 0 0 2px red;
+            }
+        }
+    }
+    &__input{
+        padding: 16px 30px;
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.7);
+        border-radius: 22px;
+        width: 100%;
+        border: none;
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 136, 0, 0.699);
+        }
+    }
+    &__message {
+        font-size: 13px;
+        margin-top: 6px;
+        color: red;
+    }
+
+}
