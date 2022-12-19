@@ -33,16 +33,17 @@ export default function Register() {
         (state: any) => state.user
     )
 
-
     const submitForm: SubmitHandler<UserDataType> = async (data) => {
         if (loading) {
             return
         }
         if (data.password !== data.passwordConfirm) {
+            alert("Password confirm not correct !");
             return
         }
         await dispatch(userRegister(data))
         navigate("/login")
+        
     }
 
     return (

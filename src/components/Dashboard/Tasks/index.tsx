@@ -27,14 +27,13 @@ export default function Tasks({ taskDatas }: { taskDatas: { tasks: TaskType[] } 
                 </div>
                 <div className={cx("task__list")}>
                     {
-                        taskDatas.tasks && taskDatas.tasks.map((taskItem: TaskType, index: number) => {
+                        taskDatas.tasks && taskDatas?.tasks.map((taskItem: TaskType, index: number) => {
                             return <div className={cx("task__group")} key={index}>
                                 <input type="checkbox" className={cx("task__checkbox")} id={taskItem.name} checked={taskItem.completed} onChange={() => handleChangeTaskStatus()} />
                                 <label className={cx("task__label")} htmlFor={taskItem.name}>{taskItem.name}</label>
                             </div>
                         })
                     }
-
                 </div>
             </div>
         </div>
