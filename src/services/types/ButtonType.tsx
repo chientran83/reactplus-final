@@ -7,5 +7,6 @@ export interface ButtonType{
     submit ?: boolean, 
     small ?: boolean, 
     rounded ?: boolean, 
-    disable ?: boolean
+    disable ?: boolean,
+    onClick?: Function
 }

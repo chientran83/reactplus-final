@@ -4,17 +4,18 @@ import { ButtonType } from '../../../services/types/ButtonType'
 
 import styles from './Button.module.scss'
 
-export default function Button({ to, primary, secondary, children, rightIcon, submit, small, rounded }: ButtonType) {
+export default function Button({ to, primary, secondary, children, rightIcon, submit, small, rounded,onClick }: ButtonType) {
     const cx = classNames.bind(styles)
     let TypeBtn: string | React.ComponentType<any> = 'button'
     if (to) {
         TypeBtn = NavLink
     }
-    let props = {
-
-    }
+    let props = {}
     if (submit) {
         props = { ...props, type: "submit" }
+    }
+    if (onClick) {
+        props = { ...props, onClick }
     }
     const classes = cx('button', {
         primary,
