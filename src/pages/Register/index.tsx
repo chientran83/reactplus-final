@@ -10,14 +10,11 @@ import styles from './Register.module.scss'
 import { userRegister } from '../../redux/actions/userAction'
 import { RegisterSchema } from '../../services/yupSchemas/RegisterSchema'
 import SuggestDirection from '../../components/common/SuggestDirection';
+import Spin from '../../components/common/Spin';
+import { UserType } from '../../services/types/UserType';
 
 export default function Register() {
-    interface UserDataType {
-        email?: string,
-        name?: string,
-        password?: string,
-        passwordConfirm?: string
-    }
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const cx = classNames.bind(styles)
@@ -33,7 +30,7 @@ export default function Register() {
         (state: any) => state.user
     )
 
-    const submitForm: SubmitHandler<UserDataType> = async (data) => {
+    const submitForm: SubmitHandler<UserType> = async (data) => {
         if (loading) {
             return
         }
@@ -43,7 +40,7 @@ export default function Register() {
         }
         await dispatch(userRegister(data))
         navigate("/login")
-        
+
     }
 
     return (
@@ -84,7 +81,9 @@ export default function Register() {
                         {errors?.password && `${errors?.password.message}`}
                     </p>
                 </div>
-                <Button primary submit disable>{loading ? "loading..." : "Register"}</Button>
+                <Spin spinning={loading} round>
+                    <Button primary submit>{loading ? "loading..." : "Register"}</Button>
+                </Spin>
             </form>
             <SuggestDirection to='/login' question='Already have an account ?'>Sign In</SuggestDirection>
         </div>

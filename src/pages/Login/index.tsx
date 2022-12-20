@@ -9,6 +9,7 @@ import styles from './Login.module.scss'
 import { LoginSchema } from '../../services/yupSchemas/LoginSchema'
 import SuggestDirection from '../../components/common/SuggestDirection';
 import { UserType } from '../../services/types/UserType';
+import Spin from '../../components/common/Spin';
 
 export default function Login() {
     const cx = classNames.bind(styles)
@@ -53,7 +54,9 @@ export default function Login() {
                         {errors?.password && `${errors?.password.message}`}
                     </p>
                 </div>
-                <Button primary submit>Sign In</Button>
+                <Spin spinning={false} round>
+                    <Button primary submit>Sign In</Button>
+                </Spin>
             </form>
             <SuggestDirection to='/register' question='Don’t have an account ?'>Sign Up</SuggestDirection>
         </div>

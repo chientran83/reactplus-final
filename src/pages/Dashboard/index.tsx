@@ -7,15 +7,13 @@ import UserInfo from '../../components/Dashboard/UserInfo'
 import TimeBanner from '../../components/Dashboard/TimeBanner'
 import Tasks from '../../components/Dashboard/Tasks'
 import { taskFetch } from '../../redux/actions/taskAction'
-import { TaskType } from '../../services/types/TaskType'
+import { TaskDataType } from '../../services/types/TaskDataType'
 
 export default function Dashboard() {
     const cx = classNames.bind(styles)
     const dispatch = useDispatch()
 
-    interface TaskDataType {
-        tasks: TaskType[]
-    }
+    
 
     const taskDatas: TaskDataType = useSelector(
         (state: any) => {
