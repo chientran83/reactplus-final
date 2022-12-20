@@ -49,7 +49,7 @@ export default function Login() {
                     </p>
                 </div>
                 <div className={cx("login-form__group", { error: !!errors.password })}>
-                    <input type="text" className={cx("login-form__input")} placeholder="Enter password" {...register('password')} />
+                    <input type="password" className={cx("login-form__input")} placeholder="Enter password" {...register('password')} />
                     <p className={cx("login-form__message")}>
                         {errors?.password && `${errors?.password.message}`}
                     </p>
